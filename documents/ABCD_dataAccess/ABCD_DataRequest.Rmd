@@ -1,0 +1,23 @@
+---
+title: "ABCD DUC"
+author: "William Murrah"
+date: "9/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Research Interest
+
+As an assistant professor at Auburn University, I am requesting an account to access shared data in the NIMH Data Archive so that I may be able to analyze ABCD data to study the relation between family characteristics and cognition. I am also enrolled as an observer in the upcoming ABCD-ReproNim Course (https://www.abcd-repronim.org) and plan to apply the tools and techniques covered in this course to analyze the dataset to answer my scientific questions.
+
+
+## Data Use Certificate (DUC)
+
+I am a researcher and assistant professor at Auburn  University. Our research involves cognitive development and academic skills (area of science) and has access to ________, ________, and ________ (data types and modalities). I am planning on integrating my expertise in these areas to ABCD initiatives to explore ________ (broad research questions) in the ABCD dataset.
+I will start conducting these analyses as part of the ABCD-ReproNim course (https://www.abcd-repronim.org). In addition to these analyses, I will use the ABCD data to generate new hypotheses prior to the course’s Project Week, to better understand the distribution of information, and to appropriately apply techniques and algorithms to this dataset. I will continue to use the data after the course to answer questions on the relation of cognition to motor skills, mental health, academic skills. We will also explore means of integrating these data with other large scale data set as well as local data we collect.
+* to develop new methodological approaches that can be used to improve analyses of such datasets; 
+* to integrate these data with my data from my own laboratory
+to predict outcomes for [addiction, mental health]
