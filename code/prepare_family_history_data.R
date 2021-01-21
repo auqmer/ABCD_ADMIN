@@ -15,3 +15,7 @@ nda_names <- fread(paste0(loc, "NDA_DEAP_names_2.0.1.csv"))
 fhx_colnames <- c("subjectid", nda_names$abcd[nda_names$instrument == "fhxp201"])
 
 fhx <- abcd[, fhx_colnames]
+
+
+# TODO: Look at Culture and Environment variables
+# TODO: get Natalie NIH id.

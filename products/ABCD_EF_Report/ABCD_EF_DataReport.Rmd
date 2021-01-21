@@ -1,0 +1,52 @@
+---
+title: "ABCD Executive Functioning Data Report"
+author: "William Murrah"
+date: "11/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NULL)
+library(data.table)
+library(VIM)
+```
+
+
+This report documents the process for creating the ABCD working data from the ABCD 2.01 Rds file.
+
+Using R `data.table` package for speed and efficiency
+
+```{r}
+abcdef1 <- readRDS("~/qmer/data/ABCD/abcdef1.Rdata")
+abcdef1 <- setalloccol(abcdef1)
+abcdef1 <- setDT(abcdef1)
+setkey(abcdef1, subjectid, eventname)
+dim(abcdef1)
+```
+The working data file is named `abcdef1` and has `r dim(abcdef1)[1]` participants (rows) and `r dim(abcdef1)[2]` variables (columns).
+
+
+## Missing Data
+
+```{r}
+#aggr(abcdef1, plot = FALSE)
+```
+
+```{r}
+abcdef1[, .N, by = eventname]
+```
+
+
+
+```{r}
+abcdef1[, .(N = .N,
+            proportion = round(.N/nrow(abcdef1),2)),
+        keyby = household.income.bl]
+```
+
+```{r}
+tab <- abcdef1[, .N, by = abcd_site]
+x <- barplot(tab$N)
+text(cex=1, x=x-.25, y=-1.25, labels = tab$abcd_site, xpd=TRUE, srt=90, adj = 1.2)
+```
+
