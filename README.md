@@ -1,4 +1,4 @@
-ABCD\_ADMIN Project
+ABCD Administration Repository
 ================
 
 This repository contains the code, materials, and documentation for
