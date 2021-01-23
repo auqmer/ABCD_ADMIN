@@ -1,5 +1,5 @@
 #************************************************************************
-# Title: explore_ABCD
+# Title: subset_ABCD
 # Author: William Murrah
 # Description: Initial data exploration
 # Created: Saturday, 24 October 2020
@@ -37,4 +37,4 @@ abcdef1 <- merge(deap, abcd_ef, by = c("subjectid", "eventname"))
 abcdef1 <- merge(abcdef1, reshist, by = c("subjectid", "eventname"))
 
 # Save Working ABCD data
-saveRDS(abcdef1, "~/qmer/data/ABCD/abcdef1.Rdata")
+saveRDS(abcdef1, "~/qmer/data/ABCD/abcdef1.rds")
