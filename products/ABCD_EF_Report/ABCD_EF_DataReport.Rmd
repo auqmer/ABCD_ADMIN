@@ -11,7 +11,6 @@ library(data.table)
 library(VIM)
 ```
 
-
 This report documents the process for creating the ABCD working data from the ABCD 2.01 Rds file.
 
 Using R `data.table` package for speed and efficiency
@@ -23,8 +22,8 @@ abcdef1 <- setDT(abcdef1)
 setkey(abcdef1, subjectid, eventname)
 dim(abcdef1)
 ```
-The working data file is named `abcdef1` and has `r dim(abcdef1)[1]` participants (rows) and `r dim(abcdef1)[2]` variables (columns).
 
+The working data file is named `abcdef1` and has `r dim(abcdef1)[1]` participants (rows) and `r dim(abcdef1)[2]` variables (columns).
 
 ## Missing Data
 
@@ -35,8 +34,6 @@ The working data file is named `abcdef1` and has `r dim(abcdef1)[1]` participant
 ```{r}
 abcdef1[, .N, by = eventname]
 ```
-
-
 
 ```{r}
 abcdef1[, .(N = .N,
@@ -49,4 +46,3 @@ tab <- abcdef1[, .N, by = abcd_site]
 x <- barplot(tab$N)
 text(cex=1, x=x-.25, y=-1.25, labels = tab$abcd_site, xpd=TRUE, srt=90, adj = 1.2)
 ```
-
